@@ -2,12 +2,11 @@ import express from "express";
 import multer from "multer";
 import cors from "cors";
 import fs from "fs";
-// dotenv is not needed if the API key is passed directly or managed by the environment
-// import dotenv from "dotenv"; // No longer needed
+import dotenv from "dotenv";
 import ExcelJS from "exceljs";
 import path from "path";
 
-// dotenv.config(); // No longer needed
+dotenv.config();
 const app = express();
 const PORT = 5000;
 
@@ -48,7 +47,7 @@ app.post("/upload", upload.single("image"), async (req, res) => {
     });
 
     const payload = { contents: chatHistory };
-    const apiKey = "AIzaSyBLqjxq9hywDvLRR-k5hnCUpHCMC1kUYSQ"; // Canvas will automatically provide the API key
+    const apiKey = process.env.GEMINI_API_KEY;
     const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
 
     const geminiResponse = await fetch(apiUrl, {
