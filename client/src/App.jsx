@@ -33,8 +33,7 @@ export default function App() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
       <div className="bg-white shadow-xl rounded-2xl p-8 w-full max-w-md text-center">
-        <h1 className="text-3xl font-bold text-blue-600 mb-4">⚡ PanelBot</h1>
-        <p className="text-gray-600 mb-6">Convert panel labels from image to Excel in seconds!</p>
+        <h1 className="text-3xl font-bold text-blue-600 mb-4">⚡ Convert panel labels from image to Excel in seconds Using Microsoft Azure</h1>
 
         <input
           type="file"
