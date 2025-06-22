@@ -12,7 +12,7 @@ export default function App() {
     formData.append("image", file);
 
     try {
-      const res = await fetch("https://panelbot-backend.onrender.com/upload", {
+      const res = await fetch("https://panelmicrosoftazurebackend.onrender.com/upload", {
         method: "POST",
         body: formData,
       });
